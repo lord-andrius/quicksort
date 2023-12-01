@@ -5,7 +5,7 @@
 void quicksort(int vetor[], int comeco, int fim)
 {
     int pivo = comeco;
-    if( fim == comeco || fim < comeco) return;
+    if( fim == comeco ) return;
     for (int c = comeco; c <= fim; c++)
     {
         if (vetor[c] < vetor[pivo])
@@ -17,7 +17,6 @@ void quicksort(int vetor[], int comeco, int fim)
                 vetor[i] = tmp;
             }
         }
-
     }
     quicksort(vetor, comeco, pivo);
     quicksort(vetor, pivo + 1, fim);
